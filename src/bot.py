@@ -25,7 +25,7 @@ async def cogs():
                 loaded += 1
                 print(f'загружен {module_name}')
             except Exception as e:
-                print(f'ошибка при кога {module_name} {e}')
+                print(f'ошибка при загрузке кога {module_name} {e}')
     return loaded
 
 async def main():

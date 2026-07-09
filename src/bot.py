@@ -8,7 +8,7 @@ dir_cogs = Path('src/cogs')
 version_file = Path('__version__')
 app_version = version_file.read_text(encoding='utf-8').strip() if version_file.exists() else '???'
 
-client = TelegramClient(dir_sess_, api_id, api_hash, device_model='Ayu UserBot', app_version=app_version, system_version=' ')
+client = TelegramClient(dir_sess_, api_id, api_hash, device_model='Ayu UserBot', app_version=app_version, system_version='userbot')
 
 async def cogs():
     loaded = 0

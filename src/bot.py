@@ -5,8 +5,10 @@ from src.cfg.config import api_id, api_hash, session, dir_sess
 
 dir_sess_ = os.path.join(dir_sess, session)
 dir_cogs = Path('src/cogs')
+version_file = Path('__version__')
+app_version = version_file.read_text(encoding='utf-8').strip() if version_file.exists() else '???'
 
-client = TelegramClient(dir_sess_, api_id, api_hash)
+client = TelegramClient(dir_sess_, api_id, api_hash, device_model='Ayu UserBot', app_version=app_version, system_version=' ')
 
 async def cogs():
     loaded = 0
